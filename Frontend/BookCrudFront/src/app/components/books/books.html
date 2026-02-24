@@ -1,1 +1,51 @@
-<p>books works!</p>
+<app-header />
+
+<main class="books-container">
+    <div class="toolbar">
+        <input
+            type="text"
+            class="search-input"
+            placeholder="Pesquisar por nome, autor ou categoria"
+            [ngModel]="searchQuery()"
+            (ngModelChange)="searchQuery.set($event)"
+        >
+        <button class="btn-primary">
+            Cadastrar novo livro
+        </button>
+    </div>
+    @if (isLoading()) {
+        <p>Carregando...</p>
+    } @else {
+        <table class="books-table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Autor</th>
+                    <th>Categoria</th>
+                    <th>Total de Páginas</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (book of filteredBooks(); track book.id) {
+                    <tr>
+                        <td>{{ book.title }}</td>
+                        <td>{{ book.author }}</td>
+                        <td>{{ book.category }}</td>
+                        <td>{{ book.totalPages }}</td>
+                        <td>{{ book.isActive ? 'Ativo' : 'Invativo' }}</td>
+                        <td>
+                            <button class="action-btn">Editar</button>
+                            <button class="action-btn">Remover</button>
+                        </td>
+                    </tr>
+                } @empty {
+                    <tr>
+                        <td colspan="6" class="empty-state">Nenhum livro encontrado {{ searchQuery() }}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</main>

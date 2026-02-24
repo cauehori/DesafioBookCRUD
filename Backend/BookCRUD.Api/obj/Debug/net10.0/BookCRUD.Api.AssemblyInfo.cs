@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BookCRUD.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26f53d94309c7e8e478ee3aec7feb13cff6eed1a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+074fe0377aac32bef574160e366f8e2e603d1a69")]
 [assembly: System.Reflection.AssemblyProductAttribute("BookCRUD.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BookCRUD.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
