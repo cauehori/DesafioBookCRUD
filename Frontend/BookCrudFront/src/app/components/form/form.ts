@@ -3,10 +3,17 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Header } from '../header/header';
 import { BookService } from '../../services/book.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-form',
-  imports: [ReactiveFormsModule, Header],
+  imports: [ReactiveFormsModule, Header, MatCardModule, MatFormFieldModule,
+    MatInputModule, MatSelectModule, MatCheckboxModule, MatButtonModule],
   templateUrl: './form.html',
   styleUrl: './form.scss',
 })

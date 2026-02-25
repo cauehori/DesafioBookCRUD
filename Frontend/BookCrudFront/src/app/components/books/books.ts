@@ -4,16 +4,22 @@ import { BookModel } from '../../models/book.model';
 import { Header } from '../header/header';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-books',
-  imports: [Header, FormsModule],
+  imports: [Header, FormsModule, MatTableModule, MatButtonModule, MatFormFieldModule, MatInputModule],
   templateUrl: './books.html',
   styleUrl: './books.scss',
 })
 export class Books implements OnInit{
   private bookService = inject(BookService)
   private router = inject(Router);
+
+  displayedColumns: string[] = ['title', 'author', 'category', 'totalPages', 'status', 'actions'];
 
   books = signal<BookModel[]>([]);
   isLoading = signal<boolean>(false);

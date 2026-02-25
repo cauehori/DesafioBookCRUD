@@ -1,9 +1,23 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #197d;
-    color: white;
+.custom-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem; 
+  height: auto; 
+  min-height: 80px; 
+
+  background-color: #1976d2 !important; 
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 10;
 }
-button { padding: 0.5rem 1rem; cursor: pointer; }
+
+.header-title {
+  font-size: 1.5rem; 
+  font-weight: 500;
+}
+
+.logout-btn {
+  font-size: 1.1rem; 
+  padding: 1.5rem 2rem;
+}

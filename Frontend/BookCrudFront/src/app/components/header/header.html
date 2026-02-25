@@ -1,4 +1,6 @@
-<header class="header">
-    <h2>Sistema de Gerenciamento de Livros</h2>
-    <button (click)="logout()">Logout</button>
-</header>
+<mat-toolbar color="primary" class="custom-header">
+    <span class="header-title">Sistema de Gerenciamento de Livros</span>
+    <button mat-raised-button color="warn" class="logout-btn" (click)="logout()">
+        <mat-icon aria-hidden="false" aria-label="logout-icon" fontIcon="logout"></mat-icon>
+    </button>
+</mat-toolbar>

@@ -1,58 +1,61 @@
 <app-header />
 
 <main class="form-container">
-    <h2>{{ isEditMode() ? 'Editar Livro' : 'Cadastrar Novo Livro' }}</h2>
-      
-    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()" class="book-form">
-        
-        <div class="form-group">
-          <label>Nome do Livro *</label>
-          <input formControlName="title" type="text" class="form-control" placeholder="Ex: O Senhor dos Anéis">
-          @if (bookForm.get('title')?.invalid && bookForm.get('title')?.touched) {
-            <small class="error-text">Nome é obrigatório e deve ter no máximo 50 caracteres.</small>
-          }
-        </div>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ isEditMode() ? 'Editar Livro' : 'Cadastrar Novo Livro' }}</mat-card-title>
+        </mat-card-header>
 
-        <div class="form-group">
-          <label>Autor *</label>
-          <input formControlName="author" type="text" class="form-control" placeholder="Ex: J.R.R. Tolkien">
-          @if (bookForm.get('author')?.invalid && bookForm.get('author')?.touched) {
-            <small class="error-text">Autor é obrigatório e deve ter no máximo 50 caracteres.</small>
-          }
-        </div>
+        <mat-card-content>
+          <form [formGroup]="bookForm" (ngSubmit)="onSubmit()" class="book-form">
+            
+            <mat-form-field appearance="outline">
+              <mat-label>Nome do Livro</mat-label>
+              <input matInput formControlName="title">
+              @if (bookForm.get('title')?.hasError('maxlength')) {
+                <mat-error>Máximo de 50 caracteres permitidos.</mat-error>
+              }
+            </mat-form-field>
 
-        <div class="form-group">
-          <label>Categoria</label>
-          <select formControlName="category" class="form-control">
-            <option value="">Selecione uma categoria...</option>
-            <option value="Ficção">Ficção</option>
-            <option value="Romance">Romance</option>
-            <option value="Autoconhecimento">Autoconhecimento</option>
-          </select>
-        </div>
+            <mat-form-field appearance="outline">
+              <mat-label>Autor</mat-label>
+              <input matInput formControlName="author">
+              @if (bookForm.get('author')?.hasError('maxlength')) {
+                <mat-error>Máximo de 50 caracteres permitidos.</mat-error>
+              }
+            </mat-form-field>
 
-        <div class="form-group">
-          <label>Total de Páginas *</label>
-          <input formControlName="totalPages" type="number" class="form-control">
-          @if (bookForm.get('totalPages')?.invalid && bookForm.get('totalPages')?.touched) {
-            <small class="error-text">O total de páginas deve ser maior que 0.</small>
-          }
-        </div>
+            <mat-form-field appearance="outline">
+              <mat-label>Categoria</mat-label>
+              <mat-select formControlName="category">
+                <mat-option value="">Selecione...</mat-option>
+                <mat-option value="Ficção">Ficção</mat-option>
+                <mat-option value="Romance">Romance</mat-option>
+                <mat-option value="Autoconhecimento">Autoconhecimento</mat-option>
+              </mat-select>
+            </mat-form-field>
 
-        <div class="form-group">
-          <label class="checkbox-label">
-            <input formControlName="isActive" type="checkbox">
-            Livro Ativo
-          </label>
-        </div>
+            <mat-form-field appearance="outline">
+              <mat-label>Total de Páginas</mat-label>
+              <input matInput type="number" formControlName="totalPages">
+              @if (bookForm.get('totalPages')?.hasError('min')) {
+                <mat-error>Deve ser maior que 0.</mat-error>
+              }
+            </mat-form-field>
 
-        <div class="button-group">
-          <button type="submit" class="btn-submit" [disabled]="bookForm.invalid || isSaving()">
-            {{ isSaving() ? 'Salvando...' : 'Salvar' }}
-          </button>
-          <button type="button" class="btn-cancel" (click)="cancel()">
-            Cancelar
-          </button>
-        </div>
-    </form>
-</main>
+            <div class="checkbox-container">
+              <mat-checkbox formControlName="isActive" color="primary">Livro Ativo</mat-checkbox>
+            </div>
+
+            <div class="button-group">
+              <button mat-raised-button color="primary" type="submit" [disabled]="bookForm.invalid || isSaving()">
+                {{ isSaving() ? 'Salvando...' : 'Salvar' }}
+              </button>
+              <button mat-stroked-button type="button" (click)="cancel()">
+                Cancelar
+              </button>
+            </div>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </main>

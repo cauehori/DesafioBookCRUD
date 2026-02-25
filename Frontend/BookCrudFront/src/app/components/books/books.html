@@ -1,51 +1,63 @@
 <app-header />
 
 <main class="books-container">
-    <div class="toolbar">
-        <input
-            type="text"
-            class="search-input"
-            placeholder="Pesquisar por nome, autor ou categoria"
-            [ngModel]="searchQuery()"
-            (ngModelChange)="searchQuery.set($event)"
-        >
-        <button class="btn-primary" (click)="goToCreate()">
-            Cadastrar novo livro
+      <div class="toolbar">
+        <mat-form-field appearance="outline" class="search-field">
+          <mat-label>Pesquisar por Nome, Autor ou Categoria...</mat-label>
+          <input matInput [ngModel]="searchQuery()" (ngModelChange)="searchQuery.set($event)">
+        </mat-form-field>
+        
+        <button mat-raised-button color="primary" class="add-btn" (click)="goToCreate()">
+          + Cadastrar novo livro
         </button>
-    </div>
-    @if (isLoading()) {
-        <p>Carregando...</p>
-    } @else {
-        <table class="books-table">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Autor</th>
-                    <th>Categoria</th>
-                    <th>Total de Páginas</th>
-                    <th>Status</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                @for (book of filteredBooks(); track book.id) {
-                    <tr>
-                        <td>{{ book.title }}</td>
-                        <td>{{ book.author }}</td>
-                        <td>{{ book.category }}</td>
-                        <td>{{ book.totalPages }}</td>
-                        <td>{{ book.isActive ? 'Ativo' : 'Invativo' }}</td>
-                        <td>
-                            <button class="action-btn" (click)="goToEdit(book.id)">Editar</button>
-                            <button class="action-btn" (click)="deleteBook(book)">Remover</button>
-                        </td>
-                    </tr>
-                } @empty {
-                    <tr>
-                        <td colspan="6" class="empty-state">Nenhum livro encontrado {{ searchQuery() }}</td>
-                    </tr>
-                }
-            </tbody>
+      </div>
+
+      @if (isLoading()) {
+        <p>Carregando livros...</p>
+      } @else {
+        <table mat-table [dataSource]="filteredBooks()" class="mat-elevation-z8 books-table">
+          
+          <ng-container matColumnDef="title">
+            <th mat-header-cell *matHeaderCellDef> Nome do Livro </th>
+            <td mat-cell *matCellDef="let book"> {{book.title}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="author">
+            <th mat-header-cell *matHeaderCellDef> Autor </th>
+            <td mat-cell *matCellDef="let book"> {{book.author}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="category">
+            <th mat-header-cell *matHeaderCellDef> Categoria </th>
+            <td mat-cell *matCellDef="let book"> {{book.category || '-'}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="totalPages">
+            <th mat-header-cell *matHeaderCellDef> Páginas </th>
+            <td mat-cell *matCellDef="let book"> {{book.totalPages}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> Status </th>
+            <td mat-cell *matCellDef="let book"> {{book.isActive ? 'Ativo' : 'Inativo'}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Ações </th>
+            <td mat-cell *matCellDef="let book">
+              <button mat-button color="primary" (click)="goToEdit(book.id)">Editar</button>
+              <button mat-button color="warn" (click)="deleteBook(book)">Remover</button>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell empty-cell" colspan="6">
+              Nenhum livro encontrado com a pesquisa "{{ searchQuery() }}".
+            </td>
+          </tr>
         </table>
     }
 </main>
