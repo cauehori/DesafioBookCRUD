@@ -12,6 +12,18 @@ export const routes: Routes = [
     loadComponent: () => import('./components/books/books').then(m => m.Books),
     canActivate: [authGuardGuard] 
   },
+
+  {
+    path: 'books/new',
+    loadComponent: () => import('./components/form/form').then(m => m.Form),
+    canActivate: [authGuardGuard]
+  },
+
+  {
+    path: 'books/edit/:id',
+    loadComponent: () => import('./components/form/form').then(m => m.Form),
+    canActivate: [authGuardGuard]
+  },
   
   { path: '**', redirectTo: 'login' }
 ];

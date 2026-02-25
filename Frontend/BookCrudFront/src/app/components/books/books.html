@@ -9,7 +9,7 @@
             [ngModel]="searchQuery()"
             (ngModelChange)="searchQuery.set($event)"
         >
-        <button class="btn-primary">
+        <button class="btn-primary" (click)="goToCreate()">
             Cadastrar novo livro
         </button>
     </div>
@@ -36,8 +36,8 @@
                         <td>{{ book.totalPages }}</td>
                         <td>{{ book.isActive ? 'Ativo' : 'Invativo' }}</td>
                         <td>
-                            <button class="action-btn">Editar</button>
-                            <button class="action-btn">Remover</button>
+                            <button class="action-btn" (click)="goToEdit(book.id)">Editar</button>
+                            <button class="action-btn" (click)="deleteBook(book)">Remover</button>
                         </td>
                     </tr>
                 } @empty {
