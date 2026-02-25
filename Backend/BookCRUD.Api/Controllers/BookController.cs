@@ -20,6 +20,15 @@ namespace BookCRUD.Api.Controllers
             return Ok(books);
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var book = await _bookServices.GetBookById(id);
+            if (book == null) return NotFound();
+
+            return Ok(book);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] BookCreateDTO bookDto)
         {

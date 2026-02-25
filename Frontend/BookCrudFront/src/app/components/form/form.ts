@@ -38,8 +38,14 @@ export class Form implements OnInit {
   }
 
   loadBook(id: number) {
-    this.bookService.getBookById(id).subscribe(book => {
-      this.bookForm.patchValue(book);
+    this.bookService.getBookById(id).subscribe({
+      next: (book) => {
+        this.bookForm.patchValue(book);
+    },
+    error: (err) => {
+        console.error('Erro ao buscar os dados do livro:', err);
+        alert('Não foi possível carregar os dados deste livro para edição');
+      }
     });
   }
 

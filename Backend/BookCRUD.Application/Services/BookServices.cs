@@ -57,4 +57,9 @@ public class BookServices(IBookRepository repository) : IBookServices
 
         await _repository.Update(book);
     }
+
+    public async Task<Book?> GetBookById(int id) 
+    {
+        return await _repository.GetById(id);
+    }
 }

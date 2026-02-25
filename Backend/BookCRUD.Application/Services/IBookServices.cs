@@ -10,4 +10,5 @@ public interface IBookServices
     Task AddBook(BookCreateDTO bookDto);
     Task UpdateBook(BookUpdateDTO bookDto);
     Task DeleteBook(int id);
+    Task<Book?> GetBookById(int id);
 }
