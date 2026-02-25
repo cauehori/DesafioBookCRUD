@@ -1,0 +1,16 @@
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Application\bin\Debug\net10.0\BookCRUD.Application.deps.json
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Application\bin\Debug\net10.0\BookCRUD.Application.dll
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Application\bin\Debug\net10.0\BookCRUD.Application.pdb
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Application\bin\Debug\net10.0\BookCRUD.Domain.dll
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Application\bin\Debug\net10.0\BookCRUD.Domain.pdb
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Application\obj\Debug\net10.0\BookCRUD.Application.csproj.AssemblyReference.cache
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Application\obj\Debug\net10.0\BookCRUD.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Application\obj\Debug\net10.0\BookCRUD.Application.AssemblyInfoInputs.cache
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Application\obj\Debug\net10.0\BookCRUD.Application.AssemblyInfo.cs
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Application\obj\Debug\net10.0\BookCRUD.Application.csproj.CoreCompileInputs.cache
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Application\obj\Debug\net10.0\BookCRUD.Application.sourcelink.json
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Application\obj\Debug\net10.0\BookCRUD.698C0FD3.Up2Date
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Application\obj\Debug\net10.0\BookCRUD.Application.dll
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Application\obj\Debug\net10.0\refint\BookCRUD.Application.dll
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Application\obj\Debug\net10.0\BookCRUD.Application.pdb
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Application\obj\Debug\net10.0\ref\BookCRUD.Application.dll

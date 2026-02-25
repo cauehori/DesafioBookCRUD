@@ -17,14 +17,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\" />
-    <Folder Include="Application\Services\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Domain\" />
-    <Folder Include="Domain\Entities\" />
-    <Folder Include="Domain\Models\" />
-    <Folder Include="DTOs\" />
-    <Folder Include="Infrastructure\Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BookCRUD.Application\BookCRUD.Application.csproj" />
+    <ProjectReference Include="..\BookCRUD.Infrastructure\BookCRUD.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

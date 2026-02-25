@@ -128,3 +128,9 @@ C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Api\bin\Debug\net10.0\Microso
 C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Api\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Api\obj\Debug\net10.0\BookCRUD.Api.sourcelink.json
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Api\bin\Debug\net10.0\BookCRUD.Application.dll
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Api\bin\Debug\net10.0\BookCRUD.Domain.dll
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Api\bin\Debug\net10.0\BookCRUD.Infrastructure.dll
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Api\bin\Debug\net10.0\BookCRUD.Application.pdb
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Api\bin\Debug\net10.0\BookCRUD.Infrastructure.pdb
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Api\bin\Debug\net10.0\BookCRUD.Domain.pdb

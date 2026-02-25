@@ -1,3 +1,6 @@
 <Solution>
   <Project Path="BookCRUD.Api/BookCRUD.Api.csproj" />
+  <Project Path="BookCRUD.Application/BookCRUD.Application.csproj" />
+  <Project Path="BookCRUD.Domain/BookCRUD.Domain.csproj" />
+  <Project Path="BookCRUD.Infrastructure/BookCRUD.Infrastructure.csproj" />
 </Solution>

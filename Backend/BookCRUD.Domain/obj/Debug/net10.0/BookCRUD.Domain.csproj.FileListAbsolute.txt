@@ -1,0 +1,12 @@
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Domain\bin\Debug\net10.0\BookCRUD.Domain.deps.json
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Domain\bin\Debug\net10.0\BookCRUD.Domain.dll
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Domain\bin\Debug\net10.0\BookCRUD.Domain.pdb
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Domain\obj\Debug\net10.0\BookCRUD.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Domain\obj\Debug\net10.0\BookCRUD.Domain.AssemblyInfoInputs.cache
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Domain\obj\Debug\net10.0\BookCRUD.Domain.AssemblyInfo.cs
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Domain\obj\Debug\net10.0\BookCRUD.Domain.csproj.CoreCompileInputs.cache
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Domain\obj\Debug\net10.0\BookCRUD.Domain.sourcelink.json
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Domain\obj\Debug\net10.0\BookCRUD.Domain.dll
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Domain\obj\Debug\net10.0\refint\BookCRUD.Domain.dll
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Domain\obj\Debug\net10.0\BookCRUD.Domain.pdb
+C:\Users\caueh\Documents\BookCRUD\Backend\BookCRUD.Domain\obj\Debug\net10.0\ref\BookCRUD.Domain.dll

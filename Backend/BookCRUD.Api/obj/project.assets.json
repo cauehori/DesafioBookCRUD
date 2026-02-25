@@ -792,6 +792,45 @@
             "related": ".xml"
           }
         }
+      },
+      "BookCRUD.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "BookCRUD.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BookCRUD.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BookCRUD.Application.dll": {}
+        }
+      },
+      "BookCRUD.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/BookCRUD.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BookCRUD.Domain.dll": {}
+        }
+      },
+      "BookCRUD.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "BookCRUD.Application": "1.0.0",
+          "BookCRUD.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.0",
+          "Pomelo.EntityFrameworkCore.MySql": "9.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BookCRUD.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BookCRUD.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -2378,10 +2417,27 @@
         "system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
         "system.identitymodel.tokens.jwt.nuspec"
       ]
+    },
+    "BookCRUD.Application/1.0.0": {
+      "type": "project",
+      "path": "../BookCRUD.Application/BookCRUD.Application.csproj",
+      "msbuildProject": "../BookCRUD.Application/BookCRUD.Application.csproj"
+    },
+    "BookCRUD.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BookCRUD.Domain/BookCRUD.Domain.csproj",
+      "msbuildProject": "../BookCRUD.Domain/BookCRUD.Domain.csproj"
+    },
+    "BookCRUD.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../BookCRUD.Infrastructure/BookCRUD.Infrastructure.csproj",
+      "msbuildProject": "../BookCRUD.Infrastructure/BookCRUD.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "BookCRUD.Application >= 1.0.0",
+      "BookCRUD.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 10.0.3",
       "Microsoft.AspNetCore.OpenApi >= 10.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.0",
@@ -2420,7 +2476,14 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\caueh\\Documents\\BookCRUD\\Backend\\BookCRUD.Application\\BookCRUD.Application.csproj": {
+              "projectPath": "C:\\Users\\caueh\\Documents\\BookCRUD\\Backend\\BookCRUD.Application\\BookCRUD.Application.csproj"
+            },
+            "C:\\Users\\caueh\\Documents\\BookCRUD\\Backend\\BookCRUD.Infrastructure\\BookCRUD.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\caueh\\Documents\\BookCRUD\\Backend\\BookCRUD.Infrastructure\\BookCRUD.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

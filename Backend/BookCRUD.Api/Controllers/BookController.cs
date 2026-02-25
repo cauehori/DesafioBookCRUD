@@ -1,5 +1,5 @@
-using BookCRUD.Api.Application.Services;
-using BookCRUD.Api.DTOs;
+using BookCRUD.Application.DTOs;
+using BookCRUD.Application.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

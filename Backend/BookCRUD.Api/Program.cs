@@ -1,7 +1,8 @@
 using System.Text;
-using BookCRUD.Api.Application.Services;
-using BookCRUD.Api.Infrastructure;
-using BookCRUD.Api.Infrastructure.Repositories;
+using BookCRUD.Application.Repositories;
+using BookCRUD.Application.Services;
+using BookCRUD.Infrastructure;
+using BookCRUD.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -12,7 +13,8 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<BookDbContext>(options =>
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString),
+    b => b.MigrationsAssembly("BookCRUD.Infrastructure")));
 
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IBookServices, BookServices>();
