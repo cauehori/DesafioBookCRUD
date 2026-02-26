@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BookCRUD.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48b94210ccfd5cb8d9d51e66d6a557d36cfd3033")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b713864a94d4d47c676c923540b569a6f9cc081")]
 [assembly: System.Reflection.AssemblyProductAttribute("BookCRUD.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BookCRUD.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

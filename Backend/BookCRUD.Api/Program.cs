@@ -18,6 +18,7 @@ builder.Services.AddDbContext<BookDbContext>(options =>
 
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IBookServices, BookServices>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 var keyString = builder.Configuration["Jwt:Key"];
 if (string.IsNullOrEmpty(keyString))
